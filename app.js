@@ -15,7 +15,7 @@ console.log ('b is : ', b);
 var phrase = [sum, 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.'];
 return phrase;
 }
-//testSum(4, 7);//
+testSum(4, 7);//test against test.js
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
