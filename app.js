@@ -112,13 +112,6 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){
-  /*var a = testArray[0];//assigns a to first place in given array
-  console.log('array position 0: ', a);
-  var b = testArray[1];//assigns b to first place in given array
-  console.log('array position 1: ', b);
-  var c = testArray[2];//assigns c to first place in given array
-  console.log('array position 2: ', c);
-*/
   var arrSum = sum(testArray[0],testArray[1]);//calls the array produced by sum function where pos [0] is the result of a+b
   var abSum = arrSum[0];//abSum gets a+b
   console.log('abSum gets: ', abSum);
@@ -149,11 +142,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(testArray){ //eslint-disable-line
+function multiplyArray(testArray){
+
+  var arrMult = multiply(testArray[0],testArray[1]);//calls the array produced by multipy function where pos [0] is the result of a*b
+  var abMult = arrMult[0];//abMult gets a*b
+  console.log('abMult gets: ', abMult);
+  var abcMult = multiply(arrMult[0],testArray[2]);//plugs the values from array into the function multiply
+  console.log('result of adding all 3 numbers in given array: ', abcMult[0]);
+
+  var arrQuest5 = [abcMult[0], 'The numbers ' + testArray[0] + ','+ testArray[1] + ',' + testArray[2] +  ' have a product of ' + abcMult[0] + '.'];
+  console.log('phrase: ', arrQuest5);
+  console.log('result: ', abcMult[0]);
+  return arrQuest5;//returns Array [result, phrase.]
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
