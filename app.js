@@ -97,6 +97,8 @@ testSumAndMultiply(4,7,5);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
+
+
 /* Problem 4
 Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
@@ -109,13 +111,30 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2,3,4]; //eslint-disable-line
 
-function sumArray(testArray){ //eslint-disable-line
+function sumArray(testArray){
+  /*var a = testArray[0];//assigns a to first place in given array
+  console.log('array position 0: ', a);
+  var b = testArray[1];//assigns b to first place in given array
+  console.log('array position 1: ', b);
+  var c = testArray[2];//assigns c to first place in given array
+  console.log('array position 2: ', c);
+*/
+  var arrSum = sum(testArray[0],testArray[1]);//calls the array produced by sum function where pos [0] is the result of a+b
+  var abSum = arrSum[0];//abSum gets a+b
+  console.log('abSum gets: ', abSum);
+  var abcSum = sum(arrSum[0],testArray[2]);//plugs the values from array into the function sum
+  var finalNum = abcSum[0];
+  console.log('result of adding all 3 numbers in given array: ', abcSum[0]);
 
+  var arrQuest4 = [testArray[0] + ','+ testArray[1] + ',' + testArray[2] +  ' was passed in as an array of numbers, and ' + abcSum[0] + ' is their sum.'];
+  console.log('phrase: ', arrQuest4);
+
+  return arrQuest4;//returns Array that includes [sum of testArray, [0],[1],[2], was passed in as an array of numbers and ____ is their sum.]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
