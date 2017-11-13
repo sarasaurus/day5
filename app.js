@@ -9,11 +9,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum (a,b) {
-var sum = a + b;
-console.log ('a is : ', a);
-console.log ('b is : ', b);
-var phrase = [sum, 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.'];
-return phrase;
+  var sum = a + b;
+  console.log ('a is : ', a);
+  console.log ('b is : ', b);
+  var phrase = [sum, 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.'];
+  return phrase;
 }
 testSum(4, 7);//test against test.js
 
@@ -119,7 +119,7 @@ function sumArray(testArray){
   var finalNum = abcSum[0];
   console.log('result of adding all 3 numbers in given array: ', abcSum[0]);
 
-  var arrQuest4 = [testArray[0] + ','+ testArray[1] + ',' + testArray[2] +  ' was passed in as an array of numbers, and ' + abcSum[0] + ' is their sum.'];
+  var arrQuest4 = [testArray[0] + ',' + testArray[1] + ',' + testArray[2] +  ' was passed in as an array of numbers, and ' + abcSum[0] + ' is their sum.'];
   console.log('phrase: ', arrQuest4);
 
   return arrQuest4;//returns Array that includes [sum of testArray, [0],[1],[2], was passed in as an array of numbers and ____ is their sum.]
