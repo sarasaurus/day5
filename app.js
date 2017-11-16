@@ -116,10 +116,13 @@ function sumArray(testArray){
   var abSum = arrSum[0];//abSum gets a+b
   console.log('abSum gets: ', abSum);
   var abcSum = sum(arrSum[0],testArray[2]);//plugs the values from array into the function sum
-  var finalNum = abcSum[0];
   console.log('result of adding all 3 numbers in given array: ', abcSum[0]);
 
+<<<<<<< HEAD
   var arrQuest4 = [testArray[0] + ',' + testArray[1] + ',' + testArray[2] +  ' was passed in as an array of numbers, and ' + abcSum[0] + ' is their sum.'];
+=======
+  var arrQuest4 = [abcSum[0], testArray[0] + ','+ testArray[1] + ',' + testArray[2] +  ' was passed in as an array of numbers, and ' + abcSum[0] + ' is their sum.'];
+>>>>>>> 4f5098fec2a354a84b3f4c9138f27787b3dddc2a
   console.log('phrase: ', arrQuest4);
 
   return arrQuest4;//returns Array that includes [sum of testArray, [0],[1],[2], was passed in as an array of numbers and ____ is their sum.]
